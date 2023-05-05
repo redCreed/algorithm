@@ -50,6 +50,7 @@ func (q *Queue) Push(d int) error {
 	}
 	q.rear++
 	q.data[q.rear] = d
+
 	return nil
 }
 
