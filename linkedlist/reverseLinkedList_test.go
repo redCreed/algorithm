@@ -11,8 +11,7 @@ func TestNewSingleLinkedList1(t *testing.T) {
 	sl.Add("李四")
 	sl.Add("33")
 	sl.List()
- 	ret := sl.reverse()
-	fmt.Println("node:", fmt.Sprintf("%+v", ret))
-
+	ret := sl.reverse()
+	fmt.Println("reverse:")
+	ret.List()
 }
-
