@@ -7,11 +7,11 @@ package linkedlist
 */
 func (sl *SingleLinkedList) reverse() *SingleLinkedList {
 	//空链表
-	if sl.head == nil || sl.head.next == nil {
+	if sl.Node == nil || sl.Node.next == nil {
 		return sl
 	}
 
-	current := sl.head
+	current := sl.Node
 	var preNode *SingleLinkedNode
 	temp := new(SingleLinkedNode)
 	for current != nil {
@@ -22,7 +22,7 @@ func (sl *SingleLinkedList) reverse() *SingleLinkedList {
 		current = temp
 	}
 
-	return &SingleLinkedList{head: preNode}
+	return &SingleLinkedList{Node: preNode}
 }
 
 //Node is a single element in a linked list
