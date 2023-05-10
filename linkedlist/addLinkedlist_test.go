@@ -22,5 +22,8 @@ func TestTwoLinkedListAddition(t *testing.T) {
 	l2.List()
 
 	fmt.Println("add list1 and list2:")
-	TwoLinkedListAddition(l1, l2).List()
+	l := TwoLinkedListAddition(l1, l2)
+	if l != nil {
+		l.List()
+	}
 }
