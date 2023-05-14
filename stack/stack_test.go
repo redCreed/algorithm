@@ -22,3 +22,4 @@ func TestNewStack(t *testing.T) {
 	}
 	fmt.Println(fmt.Sprintf("%+v", stack))
 }
+
