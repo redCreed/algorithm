@@ -6,6 +6,7 @@ func TestNewMGraph(t *testing.T) {
 	minTree := &MinTree{}
 	data := []string{"A", "B", "C", "D", "E", "F", "G"}
 	mg := NewMGraph(len(data))
+	//这里的10000表示2个顶点之间不连通
 	weight := [][]int{
 		{10000, 5, 7, 10000, 10000, 10000, 2},
 		{5, 10000, 10000, 9, 10000, 10000, 3},
