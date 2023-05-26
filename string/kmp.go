@@ -22,11 +22,11 @@ func KmpNext(str string) []int {
 	return next
 }
 
-//返回在str1中匹配str2的下标
-func KmpSearch(str1,str2 string,next []int) int {
+// KmpSearch 返回在str1中匹配str2的下标
+func KmpSearch(str1, str2 string, next []int) int {
 	j := 0
-	for i:=0; i< len(str1); i ++ {
-		for j>0 &&  str1[i] != str2[j] {
+	for i := 0; i < len(str1); i++ {
+		for j > 0 && str1[i] != str2[j] {
 			j = next[j-1]
 		}
 
@@ -34,8 +34,8 @@ func KmpSearch(str1,str2 string,next []int) int {
 			j++
 		}
 
-		if j== len(str2) {
-			return i-j+1
+		if j == len(str2) {
+			return i - j + 1
 		}
 	}
 
