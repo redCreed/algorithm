@@ -42,7 +42,6 @@ func (m *MinTree) prim(mg *MGraph, v int) {
 
 	//遍历边的个数 普利姆算法是n个点，就会有n-1个边
 	for k := 1; k < mg.nums; k++ {
-
 		//每个子图和哪个节点最近
 		for i := 0; i < mg.nums; i++ { //表示已经访问的节点
 			for j := 0; j < mg.nums; j++ { //表示未访问的节点

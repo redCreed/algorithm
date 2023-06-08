@@ -78,7 +78,7 @@ func (g *Graph) getFirstNeighbor(index int) int {
 	return -1
 }
 
-//根据前一个临结节点的下标来获取下一个临结节点的下表
+//根据前一个临结节点的下标来获取下一个临结节点的下表 v1的临结节点的下一个临结节点
 func (g *Graph) getNextNeighbor(v1, v2 int) int {
 	for j := v2 + 1; j < g.GetNumOfVertex(); j++ {
 		if g.edges[v1][j] > 0 {

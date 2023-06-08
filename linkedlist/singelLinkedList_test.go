@@ -18,5 +18,4 @@ func TestNewSingleLinkedList(t *testing.T) {
 
 	//测试倒数第k个节点
 	fmt.Println("node:", fmt.Sprintf("%+v", sl.GetIndexKNode(1)))
-
 }
