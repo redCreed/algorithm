@@ -1,7 +1,7 @@
 package array
 
 import "fmt"
-
+//2个有序的数组合并后求数组的中位数
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	len1 := len(nums1)
 	len2 := len(nums2)

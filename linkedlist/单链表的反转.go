@@ -43,3 +43,17 @@ func Reverse(head *Node) *Node {
 	}
 	return prev
 }
+
+func Reverse1(node *Node) *Node {
+	var ret *Node
+	current := node
+	for current != nil {
+		//下一个对象
+		next := current.Next
+		current.Next = ret
+		ret = current
+		//把旧链表的下一个节点复制给current
+		current = next
+	}
+	return node
+}
