@@ -1,9 +1,9 @@
 package linkedlist
 
 /*
-    查找单链表的反转
-	https://www.cnblogs.com/wll500/p/16202749.html
-	https://blog.csdn.net/weixin_35753431/article/details/128870048
+	    查找单链表的反转
+		https://www.cnblogs.com/wll500/p/16202749.html
+		https://blog.csdn.net/weixin_35753431/article/details/128870048
 */
 func (sl *SingleLinkedList) reverse() *SingleLinkedList {
 	//空链表
@@ -25,7 +25,7 @@ func (sl *SingleLinkedList) reverse() *SingleLinkedList {
 	return &SingleLinkedList{Node: preNode}
 }
 
-//Node is a single element in a linked list
+// Node is a single element in a linked list
 type Node struct {
 	Val  int
 	Next *Node
@@ -56,4 +56,19 @@ func Reverse1(node *Node) *Node {
 		current = next
 	}
 	return node
+}
+
+func InsertSort(nums []int) []int {
+	for i := 1; i < len(nums); i++ {
+		key := nums[i]
+		// 保证 0 ~ i-1 有序
+		j := i - 1
+		for j >= 0 && nums[j] > key {
+			nums[j+1] = nums[j]
+			j--
+		}
+		// 填坑 插入位置
+		nums[j+1] = key
+	}
+	return nums
 }

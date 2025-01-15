@@ -16,7 +16,7 @@ package dp
 func Solution(arr []int) int {
 	leftMax := make([]int, len(arr))
 	rightMax := make([]int, len(arr))
-
+	
 	leftMax[0] = arr[0]
 	//初始化从左往右看的最大值数组
 	for i := 1; i < len(arr); i++ {
@@ -32,7 +32,6 @@ func Solution(arr []int) int {
 	for i := 0; i < len(arr); i++ {
 		ret += Min(leftMax[i], rightMax[i]) - arr[i]
 	}
-
 	return ret
 }
 
