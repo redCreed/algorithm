@@ -17,7 +17,7 @@ func ViolenceMaxSlidingWindow(nums []int, k int) []int {
 		tempMax := 0
 		for j := i; j < i+k; j++ {
 			if tempMax < nums[j] {
-				tempMax = nums[j]
+	 			tempMax = nums[j]
 			}
 		}
 		ret = append(ret, tempMax)

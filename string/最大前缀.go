@@ -24,6 +24,7 @@ func GetPrefix(arr []string) string {
 			if arr[j][i] != firstStr[i] {
 				return firstStr[:i]
 			}
+
 		}
 	}
 	return ""

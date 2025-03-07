@@ -1,6 +1,6 @@
 package array
 
-//双指针原地交换法
+// 双指针原地交换法
 func exchange2(nums []int) []int {
 	n := len(nums)
 	left, right := 0, n-1
